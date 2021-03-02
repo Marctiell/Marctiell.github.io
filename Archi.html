@@ -1,0 +1,170 @@
+<!doctype html>
+    <html lang="it">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <title> ArchiJavaScript </title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"> </script>
+            <style>
+                html, body { margin: 0; padding: 0; }
+                canvas { display: block; }
+            </style>
+        </head>
+            <body>
+              <script> 
+							function setup() {
+							  createCanvas(700, 250);
+							  angleMode(DEGREES);
+							}
+
+							function draw() {
+							  background(218, 165, 32);
+							  // Archi in senso orario
+							  
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(50, 50, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso orario di 30°
+							  arc(50, 50, 75, 75, 0, 30);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("30°" ,43 ,105);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(150, 50, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso orario di 45°
+							  arc(150, 50, 75, 75, 0, 45);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("45°" ,143 ,105);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(250, 50, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso orario di 60°
+							  arc(250, 50, 75, 75, 0, 60);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("60°" ,243 ,105)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(350, 50, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso orario di 90°
+							  arc(350, 50, 75, 75, 0, 90);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("90°" ,343 ,105)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(450, 50, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso orario di 180°
+							  arc(450, 50, 75, 75, 0, 180);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("180°" ,440 ,105)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(550, 50, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso orario di 270°
+							  arc(550, 50, 75, 75, 0, 270);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("270°" ,540 ,105)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(650, 50, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso orario di 360°
+							  arc(650, 50, 75, 75, 0, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("360°" ,640 ,105)
+							  
+							  // Archi in senso antiorario
+							  
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(50, 150, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso antiorario di 30°
+							  arc(50, 150, 75, 75, 330, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("30°" ,43 ,205);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(150, 150, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso antiorario di 45°
+							  arc(150, 150, 75, 75, 315, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("45°" ,143 ,205);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(250, 150, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso antiorario di 60°
+							  arc(250, 150, 75, 75, 300, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("60°" ,243 ,205)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(350, 150, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso antiorario di 90°
+							  arc(350, 150, 75, 75, 270, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("90°" ,343 ,205)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(450, 150, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso antiorario di 180°
+							  arc(450, 150, 75, 75, 180, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("180°" ,440 ,205)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(550, 150, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso antiorario di 270°
+							  arc(550, 150, 75, 75, 90, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("270°" ,540 ,205)
+							  // Colore nero
+							  fill(0, 0, 0);
+							  circle(650, 150, 75);
+							  // Colore bianco
+							  fill(255, 255, 255);
+							  // Arco in senso antiorario di 360°
+							  arc(650, 150, 75, 75, 0, 360);
+							  // Colore nero
+							  fill(0, 0, 0);
+							  text("360°" ,640 ,205);
+							}
+				</script>
+            </body>
+    </html>
