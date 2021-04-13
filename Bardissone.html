@@ -1,0 +1,113 @@
+<!doctype html>
+    <html lang="it">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <title> Acchiappapalline </title>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"> </script>
+            <style>
+                html, body { margin: 0; padding: 0; }
+                canvas { display: block; }
+            </style>
+        </head>
+            <body>
+                <script>
+			           // Variabile indicante le coordinate X delle palle
+					  let CoordinateXPalle=[];
+
+				      // Variabile indicante le coordinate Y delle palle
+				      let CoordinateYPalle=[];
+
+                      // Variabile indicante la posizione X del rettangolo
+				      let CoordinataXRettangolo=0;
+
+                      // Indice
+                      let I;
+
+                      // Variabile indicante gli FPS
+				      let FrameRate;
+
+                      // Variabile indicante il punteggio
+					  let score=0;
+			  
+			    function setup() {
+                  
+				  for(I=0;I<20;I++) {
+                    CoordinateXPalle[I]=Math.random()*800;
+                    
+                  }
+                  
+                  for(I=0;I<20;I++) {
+                    CoordinateYPalle[I]=Math.random()*-800;
+                    
+                  }
+                  
+                  createCanvas(600, 500);
+				 }
+				function draw() {
+                  background(247, 232, 159);
+                  
+                  // Punteggio
+                  text("Score:" +score, 552, 10);
+                  
+                  // Colore bianco
+                  fill(255, 255, 255);
+                  
+                  // Creazione dei 20 cerchi
+                  for(I=0;I<20;I++) {
+                   circle(CoordinateXPalle[I], CoordinateYPalle[I], 50);
+                      }
+                  
+                  // Incremento delle coordinate Y delle palle per farle andare verso il basso
+                  for(I=0;I<20;I++) {
+                   CoordinateYPalle[I]=CoordinateYPalle[I]+1
+						  }
+                  
+                  // Se le coordinate Y delle palle sono maggiori o uguali di 550 si portano a -200 per farle riandare su
+                  for(I=0;I<20;I++) {
+                   if(CoordinateYPalle[I]>=550) {
+				      CoordinateYPalle[I]=-200;
+                      }
+                      }
+                  
+                  // Se le coordinate Y delle palle sono maggiori o uguali di 425 e minore o uguale di 470, se vero le coordinate X delle palle sono minori della coordinata X del rettangolo+110 e le coordinate X delle palle sono maggiori della coordinata X del rettangolo-26, se vero si portano le coordinate Y delle palle a -100, tutto questo per far si che le palline scompaiano correttamente al tocco con la racchetta
+                  for(I=0;I<20;I++) {
+                   if(CoordinateYPalle[I]>=425 && CoordinateYPalle[I]<=470) {
+				      if(CoordinateXPalle[I]<CoordinataXRettangolo+110 && CoordinateXPalle[I]>CoordinataXRettangolo-26) {
+                         
+                         CoordinateYPalle[I]=-100;
+                        
+                         // Incremento del punteggio
+                         score++;
+						 
+                        }
+                      
+						 }
+                  
+                                    }
+                  
+                     // Colore grigio scuro
+				      fill(47,79,79);
+                  
+				     // Racchetta del pong
+				     rect(CoordinataXRettangolo, 450, 90, 20); 
+				     CoordinataXRettangolo=mouseX-45;
+                  
+                     // Se la coordinata X (asse X) dell'angolo in alto a sinistra della racchetta CoordinataYRettangolo è <= a 0 allora a CoordinataXRettangolo si assegna valore 0 cosicchè il rettangolo non esca dall'area.
+				      if(CoordinataXRettangolo<=0) {
+				         CoordinataXRettangolo=0;
+					  }
+                  
+				     // Se la coordinata X (asse X) dell'angolo in alto a sinistra della racchetta CoordinataYRettangolo è >= a 509 allora a CoordinataXRettangolo si assegna valore 509 cosicchè il rettangolo non esca dall'area.
+				      if(CoordinataXRettangolo>=509) {
+				         CoordinataXRettangolo=509;
+                      
+					  }
+                  
+                     // Funzione FPS
+				      FrameRate=getFrameRate();
+				      text(FrameRate, 0, 10);
+                }
+				</script>
+            </body>
+    </html>
