@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang=it>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Marco Bardissone">
+		<meta name="description" content="Esercitazione sui cicli for, while e do-while">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"> </script>
+		<title>JS - Esercitazione sui cicli for, while e do-while</title>
+		
+		<style>
+			html, body {
+			margin: 0;
+			padding: 0;
+			}
+			
+			canvas{
+			display: block;
+			}
+		</style>
+	</head>
+        <body>
+	      <script>
+                let Y=0
+
+
+			    function setup() {
+				  createCanvas(800, 400);
+			    }
+
+			    function draw() {
+				  background(170, 140, 20);
+	  
+				  //Operazioni svolte a mano
+				  //Colore viola scuro
+				  fill(175, 20, 60)
+				  circle(25, 25, 50);
+				  circle(25, 75, 50);
+				  circle(25, 125, 50);
+				  //...
+				  circle(25, 375, 50);
+		   
+		   
+				  //codizione iniziale Y=25
+				  //codizione finile   Y<=375
+				  //istruzione di incremento  Y=Y+50
+				  //blocco istruzione generico  circle(25, Y, 50);
+		
+				  //Colore blu scuro
+				  fill(25, 25, 200);
+				  for (Y=25; Y<=375; Y=Y+50) {
+					circle(75, Y, 50);
+				  }
+		  
+				  //codizione iniziale Y=25
+				  //codizione finile   Y<=375
+				  //istruzione di incremento  Y=Y+50
+				  //blocco istruzione generico  circle(25, Y, 50);	
+
+				  //Colore verde oliva
+				  fill(100, 145, 70);
+				
+				  Y=25;
+				  do {
+					circle(125, Y, 50);
+					Y=Y+50
+				  }while(Y<=375);
+				
+				
+				  //codizione iniziale Y=25
+				  //codizione finile   Y<=375
+				  //istruzione di incremento  Y=Y+50
+				  //blocco istruzione generico  circle(25, Y, 50);	
+
+				  //Colore rosa
+				  fill(255, 0, 255);
+				
+				  Y=25;
+				  while(Y<=375){
+					circle(175, Y, 50);
+					 Y=Y+50;
+				  }
+  
+                }
+	          </script>
+	        </body>
+    </html>
